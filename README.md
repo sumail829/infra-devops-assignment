@@ -2,8 +2,8 @@
 
 ## Overview
 
-This project demonstrates basic Linux administration, Docker containerization,
-reverse proxy setup, Bash scripting, database backup, and monitoring.
+This  project demonstrates basic Linux administration, Docker containerization,
+reverse proxy setup, Bash scriptings, database backup, and monitoring.
 
 ## Project Structure
 
