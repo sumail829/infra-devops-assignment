@@ -9,7 +9,7 @@ mkdir -p "$BACKUP_DIR"
 docker exec postgres pg_dump -U appuser appdb | gzip > "$BACKUP_FILE"
 
 if [ $? -eq 0 ]; then
-    echo "Backup successful: $BACKUP_FILE"
+    echo "Backup successful : $BACKUP_FILE"
 else
     echo "Backup failed"
     rm -f "$BACKUP_FILE"
