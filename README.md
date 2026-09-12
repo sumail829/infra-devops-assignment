@@ -59,6 +59,26 @@ Nginx
 
 Nginx listens on port 80 and forwards requests to the Flask application.
 
+Nginx configuration:
+
+nginx/nginx.conf
+
+The reverse proxy uses the Docker container name:
+
+flask_app:5000
+
+Test the Nginx configuration:
+
+docker exec nginx nginx -t
+
+Test the application through Nginx:
+
+curl http://localhost
+
+The application can also be accessed from the host machine through the VirtualBox port forwarding:
+
+http://127.0.0.1:8000
+
 ## 3. Health Check Script
 
 The health check script is located at:
@@ -79,6 +99,28 @@ container is stopped.
 Logs are stored in:
 
 /var/log/infra_health.log
+
+Sat Sep 12 03:30:01 AM UTC 2026
+CPU: 25%
+RAM: 51.4%
+Disk: 85%
+Docker: Running
+App: Running
+
+Sat Sep 12 03:45:01 AM UTC 2026
+CPU: 4.2%
+RAM: 51.6%
+Disk: 85%
+Docker: Running
+App: Running
+
+Sat Sep 12 04:00:02 AM UTC 2026
+CPU: 7.7%
+RAM: 51.4%
+Disk: 85%
+Docker: Running
+App: Running
+
 
 Run manually:
 
